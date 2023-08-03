@@ -2,11 +2,11 @@ from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 
-app = Dash("Soul Food's Sales")
+app = Dash(__name__)
 
 df = pd.read_csv('./formatted_data.csv')
 
-fig = px.line(df, "date", "sales", "region")
+fig = px.line(df, x="date", y="sales", color="region")
 
 app.layout = html.Div(children=[
     html.Title(children="Soul Foods' Sales"),
