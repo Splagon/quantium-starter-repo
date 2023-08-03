@@ -6,7 +6,7 @@ app = Dash(__name__)
 
 df = pd.read_csv('./formatted_data.csv')
 
-fig = px.line(df, x="date", y="sales", color=r"region")
+fig = px.line(df, x="date", y="sales", color="region")
 
 app.layout = html.Div(children=[
     html.Title(children="Soul Foods' Sales"),
