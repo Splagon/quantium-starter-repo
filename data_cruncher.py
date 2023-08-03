@@ -3,7 +3,7 @@ import os
 
 with open("./formatted_data.csv", "w") as output_file:
     file_writer = csv.writer(output_file)
-    col_headers = ["sales", "data", "region"]
+    col_headers = ["sales", "date", "region"]
     file_writer.writerow(col_headers)
 
     for file in os.listdir("./data"):
